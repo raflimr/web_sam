@@ -1,0 +1,145 @@
+/* Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(to right, #eef1ff, #001a66);
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: transparent;
+}
+
+.background-rectangle {
+    top: 100%; /* Menempatkan rectangle tepat di bawah tombol */
+    left: 0;
+    width: 100%; /* Lebar penuh */
+    height: 80px; /* Tinggi rectangle */
+    background: linear-gradient(to right, rgba(0, 26, 102, 0.8), rgb(173, 174, 178)); /* Gradasi warna */
+    border-radius: 0; /* Sudut persegi */
+    z-index: 1; /* Tidak perlu diubah karena posisinya di bawah */
+}
+
+.buttons button {
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+    z-index: 2;
+}
+
+.sign-in {
+    z-index: 3;
+    background-color: #001a66;
+    color: #fff;
+    position: absolute; /* Pastikan posisi absolute */
+    top: 20px; /* Mengubah top ke nilai lebih kecil untuk lebih ke atas */
+    right: 170px;
+}
+
+.sign-up {
+    z-index: 3;
+    background-color: #fff;
+    color: #001a66;
+    border: 2px solid #001a66;
+    position: absolute; /* Pastikan posisi absolute */
+    top: 20px;  /* Mengatur lebih ke atas */
+    right: 40px;
+}
+
+.sign-up:hover {
+    background-color: #f0f0f0;
+}
+
+
+/* Main */
+main {
+    text-align: left; /* Rata kiri */
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Mengatur elemen secara vertikal */
+    justify-content: flex-start; /* Memastikan elemen dimulai dari atas */
+    align-items: flex-start; /* Elemen rata kiri */
+    padding-left: 100px; /* Tambahkan padding jika ingin jarak dari tepi kiri */
+    z-index: 0;
+}
+
+/* Gambar logo */
+.logo img {
+    height: 100px; /* Sesuaikan tinggi logo */
+    width: auto; /* Jaga aspek rasio agar tidak terdistorsi */
+    padding-top: 100px;
+    display: block; /* Hilangkan spasi di bawah gambar jika ada */
+}
+
+/* Tagline */
+.tagline {
+    padding-left: 150px;
+    font-family: 'Racing Sans One', sans-serif; /* Gunakan font Racing Sans One */
+    font-size: 30px;
+    font-weight: 10; /* Berat font normal */
+    color: #162656;
+    position: relative; /* Tetap di bawah logo */
+    z-index: 1;
+}
+
+/* Footer */
+footer {
+    background-color: #e5e5e5;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: inherit;
+    padding-left: 20px;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.icons a img {
+    width: 2-px;
+    height: 20px;
+    margin-right: 40px;
+    transition: transform 0.3s;
+}
+
+.icons a:hover img {
+    transform: scale(1.2);
+}
+.icons a:first-child img {
+    margin-left: 20px; 
+}
+
+.about-us {
+    color: #001a66;
+    font-weight: bold;
+    font-size: 16px;
+    padding-right: 20px;
+}
+
+.buttons{
+    background: transparent;
+}

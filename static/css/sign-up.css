@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #f0f4ff, #001a57);
+    height: 100vh;
+    width: 100vw;
+}
+
+header {
+    text-align: center; /* Menyatukan teks di tengah */
+    background: linear-gradient(to right, #ffffff, #06114F);
+    color: #fff; /* Warna teks header putih */
+    width: 100vw;
+    height: 100px;
+}
+
+header .logo-solafune-header img {
+    height: 75px; /* Sesuaikan tinggi logo */
+    width: auto; /* Jaga aspek rasio agar tidak terdistorsi */
+    display: block; /* Hilangkan spasi di bawah gambar jika ada */
+    padding:10px 15px;
+}
+
+.container {
+    margin-top: 4rem;
+    margin-left: 10%;
+    display: flex;
+    width: 80%;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.left {
+    flex: 1;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.left img {
+    max-width: 20rem;
+}
+
+.left h1 {
+    font-size: 28px;
+    color: #001a57;
+    margin: 20px 0;
+}
+
+.left p {
+    font-size: 14px;
+    color: #333;
+}
+
+.left p a {
+    color: #001a57;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.right {
+    flex: 1;
+    background-color: #e6e6e6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+}
+
+.right h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #001a57;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #003080;
+}

@@ -1,0 +1,130 @@
+* {
+    margin: 0; /* Menghapus jarak margin untuk semua elemen */
+    padding: 0; /* Menghapus padding untuk semua elemen */
+    box-sizing: border-box; /* Memastikan padding dan border dihitung dalam ukuran elemen */
+    font-family: Arial, sans-serif; /* Mengatur font default menjadi Arial */
+}
+
+body {
+    background: linear-gradient(to bottom, #06114F, #0B23A2); /* Memberikan latar belakang gradasi dari gelap ke lebih terang */
+    color: #012fac; /* Warna teks default abu-abu tua */
+}
+
+header {
+    padding: 20px; /* Memberikan ruang di dalam header */
+    text-align: center; /* Menyatukan teks di tengah */
+    background: linear-gradient(to right, #ffffff, #06114F);
+    color: #fff; /* Warna teks header putih */
+}
+
+header .logo-solafune-header img {
+    height: 50px; /* Sesuaikan tinggi logo */
+    width: auto; /* Jaga aspek rasio agar tidak terdistorsi */
+    padding-top: 10px;
+    display: block; /* Hilangkan spasi di bawah gambar jika ada */
+}
+
+main {
+    display: flex; /* Menggunakan flexbox untuk memusatkan konten */
+    justify-content: center; /* Memusatkan secara horizontal */
+    align-items: center; /* Memusatkan secara vertikal */
+    height: calc(100vh - 80px); /* Tinggi penuh layar dikurangi tinggi header */
+}
+
+.login-container {
+    display: flex; /* Membagi dua bagian: form dan informasi */
+    width: 50%;
+    height: 60%; /* Lebar kontainer login 80% dari layar */ /* Lebar maksimum 800 piksel */
+    background: #f5f5f5; /* Warna latar kontainer login (abu-abu terang) */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Memberikan bayangan */
+    border-radius: 10px; /* Sudut kontainer melengkung */
+    overflow: hidden; /* Menyembunyikan konten yang keluar dari area kontainer */
+}
+
+.form-section{
+    padding: 20px; /* Memberikan ruang di dalam masing-masing bagian */
+    flex: 1; /* Membuat dua bagian sama besar */
+    display: flex; /* Mengatur elemen dalam kolom */
+    flex-direction: column; /* Elemen diatur secara vertikal */
+    justify-content: center; /* Elemen diatur di tengah secara vertikal */
+    align-items: center; /* Elemen diatur di tengah secara horizontal */
+}
+.form-section form button {
+    background-color: #06114F;
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.info-section {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #0B23A2;
+}
+
+.info-section .logo-solafune-info-section img {
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.info-section h3 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.info-section p {
+    font-size: 16px;
+}
+
+.info-section p a {
+    color: #0B23A2;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.info-section p a:hover {
+    text-decoration: underline;
+}
+.form-section h2 {
+    margin-bottom: 20px; /* Jarak bawah heading */
+    font-size: 24px; /* Ukuran font heading */
+    font-weight: bold; /* Membuat teks heading tebal */
+    color: #2c3e50; /* Warna heading biru gelap */
+}
+
+form {
+    width: 100%; /* Form mengambil lebar penuh dalam kontainer */
+    max-width: 300px; /* Lebar maksimum form 300 piksel */
+}
+
+form label {
+    font-weight: bold; /* Membuat teks label tebal */
+    margin-bottom: 5px; /* Jarak bawah label */
+    display: block; /* Label menjadi elemen blok penuh */
+}
+
+form input {
+    width: 100%; /* Input mengambil lebar penuh form */
+    padding: 10px; /* Ruang dalam input */
+    margin-bottom: 10px; /* Jarak bawah setiap input */
+    border: 1px solid #ddd; /* Border tipis abu-abu muda */
+    border-radius: 5px; /* Sudut input melengkung */
+    font-size: 14px; /* Ukuran font input */
+}
+
+form .forgot-password {
+    font-size: 12px; /* Ukuran teks lebih kecil */
+    color: #3498db; /* Warna teks biru */
+    text-decoration: none; /* Menghapus garis bawah */
+    margin-bottom: 20px; /* Jarak bawah */
+    display: inline-block; /
+}

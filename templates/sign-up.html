@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solafune Sign Up</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sign-up.css') }}">
+</head>
+<body>
+    <header> 
+        <a href="{{ url_for('home') }}" class="href">
+            <div class="logo-solafune-header">
+                <img src="https://storage.googleapis.com/image-solafune-project-f242-02/img/solafune-logo1.png" alt="Solafune Logo">
+            </div>
+        </a>
+    </header>
+    <div class="container">
+        <div class="left">
+            <img src="https://storage.googleapis.com/image-solafune-project-f242-02/img/solafune-logo1.png" alt="Solafune Logo">
+            <h1>Hack The Planet.</h1>
+            <p>Already have an account? <a href="{{ url_for('sign_in') }}">Sign In</a>.</p>
+        </div>
+        <div class="right">
+            <h2>Sign Up</h2>
+            <form method="POST">
+                <div class="form-group">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" name="first-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" name="last-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                </div>
+                <button type="submit" class="btn">Sign Up</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

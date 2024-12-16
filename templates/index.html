@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solafune</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="buttons">
+                <a href="{{ url_for('sign_in') }}"><button class="sign-in"> Sign In</button></a>
+                <a href="{{ url_for('sign_up') }}"><button class="sign-up"> Sign Up</button></a>
+            <div class="background-rectangle"></div>
+            </div>
+        </header>        
+        <main>
+            <div class="logo">
+                <img src="https://storage.googleapis.com/image-solafune-project-f242-02/img/solafune-logo1.png" alt="Solafune Logo">
+            </div>
+            <link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
+            <p class="tagline">Hack The Planet.</p>
+        </main>
+        <footer>
+            <div class="social-media">
+                <p>Follow our social media:</p>
+                <div class="icons">
+                    <a href="#"><img src="https://storage.googleapis.com/image-solafune-project-f242-02/img/facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="https://storage.googleapis.com/image-solafune-project-f242-02/img/linkedin.png" alt="LinkedIn"></a>
+                    <a href="#"><img src="https://storage.googleapis.com/image-solafune-project-f242-02/img/x.png" alt="Twitter"></a>
+                </div>
+            </div>
+            <div class="about-us">
+                <a href="{{ url_for('about_us') }}"><button class="about-us"> About Us</button></a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

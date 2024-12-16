@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Segmentation Location Togo Africa</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/segmentation.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+    <div class="container">
+
+        <div class="header">
+            <a href="index.html" class="href">
+                <div class="logo-solafune-header">
+                    <img src="https://storage.googleapis.com/image-solafune-project-f242-02/img/solafune-logo1.png" alt="Solafune Logo">
+                </div>
+            </a>
+            <h1>Segmentation Location Togo Africa</h1>
+        </div>
+        <div class="main-content">
+            <div class="map-section">
+                <div id="map">Maps</div>
+            </div>
+            <div class="sidebar">
+                <h2>Upload File</h2>
+                <form action="/upload" method="post" enctype="multipart/form-data">
+                    <input id="upload" name="image" type="file" accept=".tif,.tiff" required/>
+                    <button type="submit">Upload</button>
+                </form>
+                <h2>Original Image</h2>
+                <img id="original-image" alt="Original Image" src="{{ original_image }}" width="200"/>
+                <h2>Segmentation Image</h2>
+                <img id="segmentation-result" alt="Result Image" src="{{ result_image }}" width="200"/>
+            </div>
+        </div>
+        <div class="footer">
+            <label for="latitude">Latitude :</label>
+            <label>{{ latitude }}</label>
+            <label for="longitude">Longitude :</label>
+            <label>{{ longitude }}</label>
+
+            <button id="input-coordinate">Input Coordinate</button>
+        </div>
+    </div>
+    <script>
+        // // Create Layer
+        // latitude = 8.599545840941921
+        // longitude = 0.9532822595726046
+        // max_zoom = 19
+        // var map = L.map('map-id').setView([latitude, longitude], zoomLevel); // Replace with your coordinates and zoom level
+        // var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        //     maxZoom: 19,
+        //     attribution: '© OpenStreetMap'
+        // }); 
+
+        // var googleSatellite = L.tileLayer('https://mt0.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
+        //     maxZoom: 19,
+        //     attribution: 'Google Satellite',
+        // });
+
+        // var baseMaps = {
+        //     "OpenStreetMap": osm,
+        //     "Satellite": googleSatellite
+        // };
+
+        // var layerControl = L.control.layers(baseMaps, null).addTo(map);
+
+        // Initialize the map using Leaflet.js
+
+        
+        const coordinates = [8.599545840941921, 0.9532822595726046]; // Coordinate Togo Africa
+
+        const map = L.map('map').setView(coordinates,8); // Set center and zoom level
+        
+        map.createPane('pane_GoogleSatellite_0');
+        map.getPane('pane_GoogleSatellite_0').style.zIndex = 400;
+        var layer_GoogleSatellite_0 = L.tileLayer('https://mt0.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
+            pane: 'pane_GoogleSatellite_0',
+            opacity: 1.0,
+            attribution: '',
+            minZoom: 1,
+            maxZoom: 28,
+            minNativeZoom: 0,
+            maxNativeZoom: 18
+        });
+        
+        map.addLayer(layer_GoogleSatellite_0);
+
+        document.getElementById('upload').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                document.getElementById('original-image').src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        });
+
+        document.getElementById('input-coordinate').addEventListener('click', function() {
+            const latitude = document.getElementById('latitude').value;
+            const longitude = document.getElementById('longitude').value;
+            alert(`Latitude: ${latitude}, Longitude: ${longitude}`);
+        });
+
+        document.getElementById('upload').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            const reader = new FileReader();
+            reader.onload = function(e) {
+            document.getElementById('original-image').src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+        });
+
+    </script>
+</body>
+</html>

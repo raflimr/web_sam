@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #06114F, #0B23A2);
+    color: #fff;
+    margin: 0;
+    margin-bottom: 0;
+    height: 100%;
+}
+
+header {
+    text-align: center; /* Menyatukan teks di tengah */
+    background: linear-gradient(to right, #ffffff, #06114F);
+    color: #fff; /* Warna teks header putih */
+    width: 100vw;
+    height: 100px;
+}
+
+header .logo-solafune-header img {
+    height: 50px; /* Sesuaikan tinggi logo */
+    width: auto; /* Jaga aspek rasio agar tidak terdistorsi */
+    display: block; /* Hilangkan spasi di bawah gambar jika ada */
+    padding:10px 15px;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    height: 40rem;
+}
+
+.team-header {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.team-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Untuk elemen teks jika ada */
+    background: #f5f5f5;
+    color: #333;
+    padding: 10px;
+    border-radius: 15px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    height: 500px;
+}
+
+.card img {
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 18px;
+    margin: 10px 0 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
