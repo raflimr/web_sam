@@ -14,7 +14,7 @@ from pathlib import Path
 from werkzeug.exceptions import RequestEntityTooLarge
 
 # Path kredensial GCP
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "gcp-key.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = os.environ.get("GCP-KEY","gcp-key.json")
 
 # Inisialisasi client GCS
 storage_client = storage.Client()
